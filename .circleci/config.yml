@@ -9,7 +9,7 @@ jobs:
       VERSION: 3.8
       BASH_ENV: local.env
     docker:
-    - image: feedyard/circleci-remote-docker
+    - image: quay.io/feedyard/circleci-base-agent
     steps:
     - checkout
     - setup_remote_docker
