@@ -18,8 +18,7 @@ jobs:
         command: docker info
     - run:
         name: decrypt secrets
-        # command: invoke dec
-        command: openssl aes-256-cbc -d -in env.ci -out local.env -k $FEEDYARD_PIPELINE_KEY
+        command: invoke dec
     - run:
         name: build image
         command: docker build -t $LIBRARY/$CONTAINER_NAME:latest .

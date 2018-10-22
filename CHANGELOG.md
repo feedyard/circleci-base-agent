@@ -118,3 +118,17 @@ Successfully installed parslet-1.8.2
 Successfully installed semverse-2.0.0  
 Successfully installed htmlentities-4.3.4  
 Successfully installed inspec-2.2.101  
+
+## 10-22-2018 package and patch update
+
+inspec
+
+Successfully installed ms_rest_azure-0.11.0  
+Successfully installed azure_mgmt_resources-0.17.2  
+Successfully installed azure_graph_rbac-0.17.0  
+Successfully installed azure_mgmt_key_vault-0.17.2  
+Successfully installed signet-0.11.0  
+Successfully installed googleauth-0.6.7  
+Successfully installed google-api-client-0.23.9  
+Successfully installed train-1.5.4  
+Successfully installed inspec-3.0.9  

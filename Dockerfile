@@ -4,7 +4,7 @@ LABEL maintainers = "nic.cheneweth@thoughtworks.com"
 
 # package versions installed
 ENV INVOKE_VERSION=1.2.0
-ENV INSPEC_VERSION=2.2.101
+ENV INSPEC_VERSION=3.0.9
 
 # general packages to support building infra oriented docker images
 RUN apk add --no-cache \

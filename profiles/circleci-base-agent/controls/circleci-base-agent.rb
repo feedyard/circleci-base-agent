@@ -94,7 +94,7 @@ control 'pip version' do
   title 'confirm pip version installed'
   desc 'confirm version reported by pip3 matches the desired version'
   describe command('pip -V') do
-    its('stdout') { should include ('18.0') }
+    its('stdout') { should include ('18.1') }
   end
 end
 
@@ -121,6 +121,6 @@ control 'inspec version' do
   title 'confirm inspec version installed'
   desc 'confirm version reported by inspec matches the desired version'
   describe command('inspec version') do
-    its('stdout') { should include ('2.2') }
+    its('stdout') { should include ('3.0') }
   end
 end

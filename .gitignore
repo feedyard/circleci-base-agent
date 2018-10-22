@@ -1,3 +1,5 @@
 *.env
 .ruby-version
 .idea/
+
+Gemfile.lock
