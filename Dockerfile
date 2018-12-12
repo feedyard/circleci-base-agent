@@ -1,13 +1,15 @@
-FROM quay.io/feedyard/circleci-remote-docker:3.8.87
+FROM quay.io/feedyard/circleci-remote-docker:4.2.1
 
 LABEL maintainers = "nic.cheneweth@thoughtworks.com"
 
 # package versions installed
+ENV INSPEC_VERSION=3.0.64
 ENV INVOKE_VERSION=1.2.0
-ENV INSPEC_VERSION=3.0.9
 
 # general packages to support building infra oriented docker images
 RUN apk add --no-cache \
+    docker \
+    openrc \
     curl \
     wget \
     python3 \
@@ -18,7 +20,8 @@ RUN apk add --no-cache \
     libffi-dev \
     musl-dev \
     make \
-    jq &&\
+    jq && \
+    rc-update add docker boot && \
     python3 -m ensurepip && \
     rm -r /usr/lib/python*/ensurepip && \
     pip3 install --upgrade pip setuptools && \
