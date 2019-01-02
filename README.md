@@ -12,6 +12,9 @@ ruby
 cli or testing frameworks:  
 invoke  
 inspec  
+pylint  
+yamllint  
+rubocop  
 
 See CHANGELOG for list of installed packages/versions  
 

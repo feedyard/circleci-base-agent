@@ -104,6 +104,8 @@ control 'python packages' do
   desc 'confirm all desired python packages are installed'
   describe command('pip list') do
     its('stdout') { should include ('invoke') }
+    its('stdout') { should include ('pylint') }
+    its('stdout') { should include ('yamllint') }
   end
 end
 
@@ -113,6 +115,33 @@ control 'invoke version' do
   desc 'confirm version reported by invoke matches the desired version'
   describe command('invoke -V') do
     its('stdout') { should include ('1.2') }
+  end
+end
+
+control 'pylint version' do
+  impact 1.0
+  title 'confirm pylint version installed'
+  desc 'confirm version reported by pylint matches the desired version'
+  describe command('pylint --version') do
+    its('stdout') { should include ('2.2') }
+  end
+end
+
+control 'yamllint version' do
+  impact 1.0
+  title 'confirm yamllint version installed'
+  desc 'confirm version reported by yamllint matches the desired version'
+  describe command('yamllint -v') do
+    its('stdout') { should include ('1.13') }
+  end
+end
+
+control 'rubocop version' do
+  impact 1.0
+  title 'confirm rubocop version installed'
+  desc 'confirm version reported by rubocop matches the desired version'
+  describe command('rubocop -v') do
+    its('stdout') { should include ('0.61') }
   end
 end
 

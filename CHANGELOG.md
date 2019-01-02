@@ -261,3 +261,10 @@ Successfully installed htmlentities-4.3.4
 Successfully installed tins-1.20.2  
 Successfully installed term-ansicolor-1.7.0  
 Successfully installed inspec-3.0.64  
+
+## 01-02-2019 Add pylint, yamllint, rubocop
+
+Installing pylint (2.2.2)  
+Installing yamllint (1.13.0)  
+
+Successfully installed rubocop-0.61.1  
