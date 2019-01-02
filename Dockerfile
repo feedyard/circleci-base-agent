@@ -16,10 +16,13 @@ RUN apk add --no-cache \
     curl \
     wget \
     python3 \
+    python3-dev \
     ruby \
     ruby-bundler \
     ruby-dev \
     g++ \
+    gcc \
+    build-base \
     libffi-dev \
     musl-dev \
     make \
@@ -33,6 +36,6 @@ RUN apk add --no-cache \
 
 RUN pip install invoke==${INVOKE_VERSION} pylint==${PYLINT_VERSION} yamllint==${YAMLLINT_VERSION}
 RUN echo "gem: --no-document" > /etc/gemrc && \
-    gem install inspec -v ${INSPEC_VERSION} rubocop -v ${RUBOCOP_VERSION}
+    gem install inspec:${INSPEC_VERSION} rubocop:${RUBOCOP_VERSION}
 
 HEALTHCHECK NONE
