@@ -3,7 +3,7 @@ FROM quay.io/feedyard/circleci-remote-docker:4.2.1
 LABEL maintainers = "nic.cheneweth@thoughtworks.com"
 
 # package versions installed
-ENV INSPEC_VERSION=3.0.64
+ENV INSPEC_VERSION=3.2.6
 ENV INVOKE_VERSION=1.2.0
 ENV PYLINT_VERSION=2.2.2
 ENV YAMLLINT_VERSION=1.13.0

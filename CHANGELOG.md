@@ -268,3 +268,4 @@ Installing pylint (2.2.2)
 Installing yamllint (1.13.0)  
 
 Successfully installed rubocop-0.61.1  
+Successfully installed inspec-3.2.6  
