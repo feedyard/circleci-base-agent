@@ -150,6 +150,6 @@ control 'inspec version' do
   title 'confirm inspec version installed'
   desc 'confirm version reported by inspec matches the desired version'
   describe command('inspec version') do
-    its('stdout') { should include ('3.0') }
+    its('stdout') { should include ('3.2') }
   end
 end
