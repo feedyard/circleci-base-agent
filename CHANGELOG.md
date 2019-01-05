@@ -119,7 +119,7 @@ Successfully installed semverse-2.0.0
 Successfully installed htmlentities-4.3.4  
 Successfully installed inspec-2.2.101  
 
-## 10-22-2018 package and patch update
+### 10-22-2018 package and patch update
 
 inspec
 
@@ -133,7 +133,7 @@ Successfully installed google-api-client-0.23.9
 Successfully installed train-1.5.4  
 Successfully installed inspec-3.0.9  
 
-## 12-11-2018 Patch build, update pipeline process for use of orbs
+### 12-11-2018 Patch build, update pipeline process for use of orbs
 
 (1/46) Installing curl (7.61.1-r1)  
 (2/46) Installing libmnl (1.0.4-r0)  
@@ -262,10 +262,41 @@ Successfully installed tins-1.20.2
 Successfully installed term-ansicolor-1.7.0  
 Successfully installed inspec-3.0.64  
 
-## 01-02-2019 Add pylint, yamllint, rubocop
+### 01-02-2019 Add pylint, yamllint, rubocop
 
 Installing pylint (2.2.2)  
 Installing yamllint (1.13.0)  
 
 Successfully installed rubocop-0.61.1  
 Successfully installed inspec-3.2.6  
+
+### 01-05-2019 Add ruby-webrick, remove build packages
+
+Cleaning up installed gems...  
+Clean up complete  
+WARNING: Ignoring APKINDEX.adfa7ceb.tar.gz: No such file or directory  
+WARNING: Ignoring APKINDEX.efaa1f73.tar.gz: No such file or directory  
+(1/24) Purging build-dependencies (0)  
+(2/24) Purging build-base (0.5-r1)  
+(3/24) Purging file (5.32-r0)  
+(4/24) Purging fortify-headers (0.9-r0)  
+(5/24) Purging python3-dev (3.6.6-r0)  
+(6/24) Purging ruby-dev (2.5.2-r0)  
+(7/24) Purging gmp-dev (6.1.2-r1)  
+(8/24) Purging libgmpxx (6.1.2-r1)  
+(9/24) Purging libffi-dev (3.2.1-r4)  
+(10/24) Purging g++ (6.4.0-r9)  
+(11/24) Purging libc-dev (0.7.1-r0)  
+(12/24) Purging musl-dev (1.1.19-r10)  
+(13/24) Purging gcc (6.4.0-r9)  
+(14/24) Purging binutils (2.30-r5)  
+(15/24) Purging libatomic (6.4.0-r9)  
+(16/24) Purging libgomp (6.4.0-r9)  
+(17/24) Purging make (4.2.1-r2)  
+(18/24) Purging libmagic (5.32-r0)  
+(19/24) Purging isl (0.18-r0)  
+(20/24) Purging pkgconf (1.5.3-r0)  
+(21/24) Purging libstdc++ (6.4.0-r9)  
+(22/24) Purging libgcc (6.4.0-r9)  
+(23/24) Purging mpc1 (1.0.3-r1)  
+(24/24) Purging mpfr3 (3.1.5-r1)  

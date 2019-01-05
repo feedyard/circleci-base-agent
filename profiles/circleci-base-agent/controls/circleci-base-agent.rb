@@ -5,15 +5,16 @@ control 'packages' do
   describe command('apk info') do
     its('stdout') { should include ('curl') }
     its('stdout') { should include ('wget') }
+    its('stdout') { should include ('jq') }
     its('stdout') { should include ('python3') }
     its('stdout') { should include ('ruby') }
     its('stdout') { should include ('ruby-bundler') }
-    its('stdout') { should include ('ruby-dev') }
-    its('stdout') { should include ('g++') }
-    its('stdout') { should include ('libffi-dev') }
-    its('stdout') { should include ('musl-dev') }
-    its('stdout') { should include ('make') }
-    its('stdout') { should include ('jq') }
+    its('stdout') { should include ('ruby-webrick') }
+    its('stdout') { should_not include ('ruby-dev') }
+    its('stdout') { should_not include ('g++') }
+    its('stdout') { should_not include ('libffi-dev') }
+    its('stdout') { should_not include ('musl-dev') }
+    its('stdout') { should_not include ('make') }
   end
 end
 
@@ -59,24 +60,6 @@ control 'bundler version' do
   desc 'confirm version reported by bundler matches the desired version'
   describe command('bundler -v') do
     its('stdout') { should include ('1.16') }
-  end
-end
-
-control 'g++ version' do
-  impact 1.0
-  title 'confirm g++ version installed'
-  desc 'confirm version reported by g++ matches the desired version'
-  describe command('g++ --version') do
-    its('stdout') { should include ('6.4') }
-  end
-end
-
-control 'make version' do
-  impact 1.0
-  title 'confirm make version installed'
-  desc 'confirm version reported by make matches the desired version'
-  describe command('make -v') do
-    its('stdout') { should include ('4.2.1') }
   end
 end
 
