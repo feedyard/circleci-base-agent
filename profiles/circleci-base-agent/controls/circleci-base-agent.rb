@@ -10,6 +10,7 @@ control 'packages' do
     its('stdout') { should include ('ruby') }
     its('stdout') { should include ('ruby-bundler') }
     its('stdout') { should include ('ruby-webrick') }
+    its('stdout') { should include ('ruby-bigdecimal') }
     its('stdout') { should_not include ('ruby-dev') }
     its('stdout') { should_not include ('g++') }
     its('stdout') { should_not include ('libffi-dev') }

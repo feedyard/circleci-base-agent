@@ -18,6 +18,7 @@ RUN apk add --no-cache \
         python3 \
         ruby \
         ruby-bundler \
+        ruby-bigdecimal \
         ruby-webrick \
         jq && \
     apk add --virtual build-dependencies \
