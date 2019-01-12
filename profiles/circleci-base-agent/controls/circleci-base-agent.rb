@@ -33,7 +33,7 @@ control 'wget version' do
   title 'confirm wget version installed'
   desc 'confirm version reported by wget matches the desired version'
   describe command('wget --version') do
-    its('stdout') { should include ('1.19') }
+    its('stdout') { should include ('1.20') }
   end
 end
 

@@ -300,3 +300,8 @@ WARNING: Ignoring APKINDEX.efaa1f73.tar.gz: No such file or directory
 (22/24) Purging libgcc (6.4.0-r9)  
 (23/24) Purging mpc1 (1.0.3-r1)  
 (24/24) Purging mpfr3 (3.1.5-r1)  
+
+### 01-11-2019
+
+add pkg ruby-bigdecimal
+Installing wget (1.20.0-r0)  
