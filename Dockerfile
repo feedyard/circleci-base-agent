@@ -6,8 +6,9 @@ LABEL maintainers = "nic.cheneweth@thoughtworks.com"
 ENV INSPEC_VERSION=3.2.6
 ENV INVOKE_VERSION=1.2.0
 ENV PYLINT_VERSION=2.2.2
-ENV YAMLLINT_VERSION=1.13.0
-ENV RUBOCOP_VERSION=0.61.1
+ENV YAMLLINT_VERSION=1.14.0
+ENV RUBOCOP_VERSION=0.62.0
+ENV HADOLINT_VERSION=1.15.0
 
 # general packages to support building infra oriented docker images
 RUN apk add --no-cache \
@@ -45,6 +46,9 @@ RUN pip install \
     gem install \
         inspec:${INSPEC_VERSION} \
         rubocop:${RUBOCOP_VERSION} && \
+    wget -q https://github.com/hadolint/hadolint/releases/download/v${HADOLINT_VERSION}/hadolint-Linux-x86_64 && \
+        chmod +x hadolint-Linux-x86_64 && \
+        mv hadolint-Linux-x86_64 /usr/bin/hadolint && \
     gem cleanup && \
     rm -rf /usr/lib/ruby/gems/*/cache/* \
            /var/cache/apk/* \

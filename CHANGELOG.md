@@ -305,3 +305,8 @@ WARNING: Ignoring APKINDEX.efaa1f73.tar.gz: No such file or directory
 
 add pkg ruby-bigdecimal
 Installing wget (1.20.0-r0)  
+
+### 01-25-2019 patch and package additions
+
+add hadolint
+update yamllint 1.14
