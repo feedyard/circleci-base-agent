@@ -78,7 +78,7 @@ control 'pip version' do
   title 'confirm pip version installed'
   desc 'confirm version reported by pip3 matches the desired version'
   describe command('pip -V') do
-    its('stdout') { should include ('18.1') }
+    its('stdout') { should include ('19') }
   end
 end
 
