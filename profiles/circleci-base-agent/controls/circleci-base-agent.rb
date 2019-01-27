@@ -116,7 +116,7 @@ control 'yamllint version' do
   title 'confirm yamllint version installed'
   desc 'confirm version reported by yamllint matches the desired version'
   describe command('yamllint -v') do
-    its('stdout') { should include ('1.13') }
+    its('stdout') { should include ('1.14') }
   end
 end
 
@@ -125,7 +125,7 @@ control 'rubocop version' do
   title 'confirm rubocop version installed'
   desc 'confirm version reported by rubocop matches the desired version'
   describe command('rubocop -v') do
-    its('stdout') { should include ('0.61') }
+    its('stdout') { should include ('0.62') }
   end
 end
 
