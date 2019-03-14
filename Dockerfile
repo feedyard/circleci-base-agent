@@ -1,14 +1,14 @@
-FROM quay.io/feedyard/circleci-remote-docker:4.2.2
+FROM quay.io/feedyard/circleci-remote-docker:4.3.0
 
 LABEL maintainers = "nic.cheneweth@thoughtworks.com"
 
 # package versions installed
-ENV INSPEC_VERSION=3.2.6
+ENV INSPEC_VERSION=3.7.1
 ENV INVOKE_VERSION=1.2.0
-ENV PYLINT_VERSION=2.2.2
-ENV YAMLLINT_VERSION=1.14.0
-ENV RUBOCOP_VERSION=0.62.0
-ENV HADOLINT_VERSION=1.15.0
+ENV PYLINT_VERSION=2.3.1
+ENV YAMLLINT_VERSION=1.15.0
+ENV RUBOCOP_VERSION=0.65.0
+ENV HADOLINT_VERSION=1.16.0
 
 # general packages to support building infra oriented docker images
 RUN apk add --no-cache \

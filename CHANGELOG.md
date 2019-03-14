@@ -310,3 +310,76 @@ Installing wget (1.20.0-r0)
 
 add hadolint
 update yamllint 1.14
+
+### 03-14-2019 alpine:3.9.2 and current packages
+
+(1/32) Installing curl (7.64.0-r1)  
+(2/32) Installing libseccomp (2.3.3-r1)  
+(3/32) Installing runc (1.0.0_rc6-r1)  
+(4/32) Installing containerd (1.2.2-r0)  
+(5/32) Installing libmnl (1.0.4-r0)  
+(6/32) Installing jansson (2.11-r0)  
+(7/32) Installing libnftnl-libs (1.1.1-r0)  
+(8/32) Installing iptables (1.6.2-r1)  
+(9/32) Installing tini-static (0.18.0-r0)  
+(10/32) Installing device-mapper-libs (2.02.182-r0)  
+(11/32) Installing libltdl (2.4.6-r5)  
+(12/32) Installing docker (18.09.1-r0)  
+Executing docker-18.09.1-r0.pre-install  
+(13/32) Installing oniguruma (6.9.1-r0)  
+(14/32) Installing jq (1.6-r0)  
+(15/32) Installing openrc (0.39.2-r3)  
+Executing openrc-0.39.2-r3.post-install
+(16/32) Installing docker-openrc (18.09.1-r0)  
+(17/32) Installing libbz2 (1.0.6-r6)  
+(18/32) Installing libffi (3.2.1-r6)  
+(19/32) Installing gdbm (1.13-r1)  
+(20/32) Installing xz-libs (5.2.4-r0)  
+(21/32) Installing sqlite-libs (3.26.0-r3)  
+(22/32) Installing python3 (3.6.8-r1)  
+(23/32) Installing gmp (6.1.2-r1)  
+(24/32) Installing yaml (0.2.1-r0)  
+(25/32) Installing ruby-libs (2.5.3-r1)  
+(26/32) Installing ruby (2.5.3-r1)  
+(27/32) Installing ruby-bigdecimal (2.5.3-r1)  
+(28/32) Installing ruby-etc (2.5.3-r1)  
+(29/32) Installing ruby-io-console (2.5.3-r1)  
+(30/32) Installing ruby-bundler (1.17.1-r0)  
+(31/32) Installing ruby-webrick (2.5.3-r1)  
+(32/32) Installing wget (1.20.1-r0)  
+Executing busybox-1.29.3-r10.trigger
+OK: 363 MiB in 68 packages
+(1/25) Installing binutils (2.31.1-r2)  
+(2/25) Installing libmagic (5.35-r0)  
+(3/25) Installing file (5.35-r0)  
+(4/25) Installing isl (0.18-r0)  
+(5/25) Installing libgomp (8.2.0-r2)  
+(6/25) Installing libatomic (8.2.0-r2)  
+(7/25) Installing libgcc (8.2.0-r2)  
+(8/25) Installing mpfr3 (3.1.5-r1)  
+(9/25) Installing mpc1 (1.0.3-r1)  
+(10/25) Installing libstdc++ (8.2.0-r2)  
+(11/25) Installing gcc (8.2.0-r2)  
+(12/25) Installing musl-dev (1.1.20-r3)  
+(13/25) Installing libc-dev (0.7.1-r0)  
+(14/25) Installing g++ (8.2.0-r2)  
+(15/25) Installing make (4.2.1-r2)  
+(16/25) Installing fortify-headers (1.0-r0)  
+(17/25) Installing build-base (0.5-r1)  
+(18/25) Installing pkgconf (1.6.0-r0)  
+(19/25) Installing python3-dev (3.6.8-r1)  
+(20/25) Installing libgmpxx (6.1.2-r1)  
+(21/25) Installing gmp-dev (6.1.2-r1)  
+(22/25) Installing ruby-dev (2.5.3-r1)  
+(23/25) Installing linux-headers (4.18.13-r1)  
+(24/25) Installing libffi-dev (3.2.1-r6)  
+(25/25) Installing build-dependencies (0)  
+
+Successfully installed pip-19.0.3 setuptools-40.8.0
+
+INSPEC_VERSION=3.7.1
+INVOKE_VERSION=1.2.0
+PYLINT_VERSION=2.3.1
+YAMLLINT_VERSION=1.15.0
+RUBOCOP_VERSION=0.65.0
+HADOLINT_VERSION=1.16.0

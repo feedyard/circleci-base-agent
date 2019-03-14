@@ -60,7 +60,7 @@ control 'bundler version' do
   title 'confirm bundler version installed'
   desc 'confirm version reported by bundler matches the desired version'
   describe command('bundler -v') do
-    its('stdout') { should include ('1.16') }
+    its('stdout') { should include ('1.17') }
   end
 end
 
@@ -69,7 +69,7 @@ control 'jq version' do
   title 'confirm jq version installed'
   desc 'confirm version reported by jq matches the desired version'
   describe command('jq --version') do
-    its('stdout') { should include ('v3.7') }
+    its('stdout') { should include ('v3.8') }
   end
 end
 
@@ -107,7 +107,7 @@ control 'pylint version' do
   title 'confirm pylint version installed'
   desc 'confirm version reported by pylint matches the desired version'
   describe command('pylint --version') do
-    its('stdout') { should include ('2.2') }
+    its('stdout') { should include ('2.3') }
   end
 end
 
@@ -116,7 +116,7 @@ control 'yamllint version' do
   title 'confirm yamllint version installed'
   desc 'confirm version reported by yamllint matches the desired version'
   describe command('yamllint -v') do
-    its('stdout') { should include ('1.14') }
+    its('stdout') { should include ('1.15') }
   end
 end
 
@@ -125,7 +125,7 @@ control 'rubocop version' do
   title 'confirm rubocop version installed'
   desc 'confirm version reported by rubocop matches the desired version'
   describe command('rubocop -v') do
-    its('stdout') { should include ('0.62') }
+    its('stdout') { should include ('0.65') }
   end
 end
 
@@ -134,6 +134,6 @@ control 'inspec version' do
   title 'confirm inspec version installed'
   desc 'confirm version reported by inspec matches the desired version'
   describe command('inspec version') do
-    its('stdout') { should include ('3.2') }
+    its('stdout') { should include ('3.7') }
   end
 end
