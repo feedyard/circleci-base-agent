@@ -11,7 +11,8 @@ ENV RUBOCOP_VERSION=0.65.0
 ENV HADOLINT_VERSION=1.16.0
 
 # general packages to support building infra oriented docker images
-RUN apk add --no-cache \
+RUN echo 'http://dl-cdn.alpinelinux.org/alpine/v3.8/main' >> /etc/apk/repositories && \
+    apk add --no-cache \
         docker \
         openrc \
         curl \
@@ -21,7 +22,7 @@ RUN apk add --no-cache \
         ruby-bundler \
         ruby-bigdecimal \
         ruby-webrick \
-        jq && \
+        jq=1.6_rc1-r1 && \
     apk add --virtual build-dependencies \
         build-base \
         python3-dev \
