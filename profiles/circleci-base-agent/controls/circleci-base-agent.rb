@@ -137,3 +137,12 @@ control 'inspec version' do
     its('stdout') { should include ('3.9') }
   end
 end
+
+control 'gnugp version' do
+  impact 1.0
+  title 'confirm gnugp version installed'
+  desc 'confirm version reported by gnugp matches the desired version'
+  describe command('gpg --version') do
+    its('stdout') { should include ('2.2') }
+  end
+end

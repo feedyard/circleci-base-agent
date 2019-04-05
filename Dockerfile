@@ -23,6 +23,7 @@ RUN echo 'http://dl-cdn.alpinelinux.org/alpine/v3.8/main' >> /etc/apk/repositori
         ruby-bundler=1.17.1-r0 \
         ruby-bigdecimal=2.5.3-r1 \
         ruby-webrick=2.5.3-r1 \
+        gnupg=2.2.12-r0 \
         jq=1.6-r0 && \
     apk add --virtual build-dependencies \
         build-base=0.5-r1 \
