@@ -5,7 +5,7 @@ orbs:
   circle-agent: feedyard/circleci-agent-publish@dev:latest
 
 workflows:
-  circleci-remote-docker-image-pipeline:
+  circleci-base-image-pipeline:
     jobs:
       - circle-agent/dev-release:
           context: ci
