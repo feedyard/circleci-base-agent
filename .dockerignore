@@ -1,3 +1,7 @@
-README.md
-secrets.*
-.gitignore
+.*
+Gemfile
+prereqs.sh
+profiles/
+requirements.txt
+tasks.py
+testlocal.sh

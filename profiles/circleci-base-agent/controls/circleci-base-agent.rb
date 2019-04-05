@@ -69,7 +69,7 @@ control 'jq version' do
   title 'confirm jq version installed'
   desc 'confirm version reported by jq matches the desired version'
   describe command('jq --version') do
-    its('stdout') { should include ('v3.7') }
+    its('stdout') { should include ('v3.8') }
   end
 end
 
@@ -134,6 +134,6 @@ control 'inspec version' do
   title 'confirm inspec version installed'
   desc 'confirm version reported by inspec matches the desired version'
   describe command('inspec version') do
-    its('stdout') { should include ('3.7') }
+    its('stdout') { should include ('3.9') }
   end
 end
