@@ -37,7 +37,7 @@ RUN echo 'http://dl-cdn.alpinelinux.org/alpine/v3.8/main' >> /etc/apk/repositori
     rc-update add docker boot && \
     python3 -m ensurepip && \
     rm -r /usr/lib/python*/ensurepip && \
-    pip3 install --upgrade pip==19.0.3 setuptools==41.0.0 && \
+    pip3 install --upgrade pip==19.1.1 setuptools==41.0.1 && \
     if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi && \
     rm -r /root/.cache
 
