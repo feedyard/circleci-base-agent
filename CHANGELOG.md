@@ -582,5 +582,15 @@ Successfully installed psych-3.1.0
 Successfully installed rainbow-3.0.0
 Successfully installed ruby-progressbar-1.10.0
 
+### 05-18-2019 package updates
 
+wget=1.20.3-r0
+ruby 2.5.5-r0
+python3=3.6.8-r2
+
+in removed build packages
+ruby-dev=2.5.5-r0
+gcc 2.3.0-r0
+g++ 2.3.0-r0
+python3-dev=3.6.8-r2
 

@@ -4,3 +4,4 @@ source 'https://rubygems.org'
 ruby ">= 2.6.0"
 
 gem 'inspec', '~> 3.9'
+gem 'rubocop', '~> 0.65'
