@@ -3,11 +3,11 @@ FROM quay.io/feedyard/circleci-remote-docker:5.0.3
 LABEL maintainers = "nic.cheneweth@thoughtworks.com"
 
 # package versions installed
-ENV INSPEC_VERSION=3.9.0
+ENV INSPEC_VERSION=4.3.2
 ENV INVOKE_VERSION=1.2.0
 ENV PYLINT_VERSION=2.3.1
 ENV YAMLLINT_VERSION=1.15.0
-ENV RUBOCOP_VERSION=0.65.0
+ENV RUBOCOP_VERSION=0.71.0
 ENV HADOLINT_VERSION=1.16.3
 
 # general packages to support building infra oriented docker images
