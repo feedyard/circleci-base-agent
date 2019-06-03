@@ -47,7 +47,7 @@ RUN pip install \
         yamllint==${YAMLLINT_VERSION} && \
     echo "gem: --no-document" > /etc/gemrc && \
     gem install \
-        inspec:${INSPEC_VERSION} \
+        inspec-bin:${INSPEC_VERSION} \
         rubocop:${RUBOCOP_VERSION} && \
     wget -q https://github.com/hadolint/hadolint/releases/download/v${HADOLINT_VERSION}/hadolint-Linux-x86_64 && \
         chmod +x hadolint-Linux-x86_64 && \
