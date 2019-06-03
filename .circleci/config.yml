@@ -2,21 +2,21 @@
 version: 2.1
 
 orbs:
-  circle-agent: feedyard/circleci-agent-publish@dev:latest
+  executor-tools: feedyard/executor-tools@0.1.0
+  common: feedyard/common-pipeline-tasks@0.3.0
 
 workflows:
-  circleci-base-agent-pipeline:
+  version: 2
+
+  circleci-base-agent-executor-pipeline:
     jobs:
-      - circle-agent/dev-release:
-          context: ci
+      - executor-tools/dev-release:
+          context: executor-publishing
+          image: feedyard/circleci-base-agent
           registry: quay.io
-          after_checkout:
+          after-build:
             - run:
-                name: Lint Dockerfile
-                command: hadolint Dockerfile
-          after_build:
-            - run:
-                name: configuration testing of the image
+                name: configuration testing
                 command: |
                   set -euo pipefail
                   inspec exec --no-distinct-exit profiles/cis-docker
@@ -28,11 +28,58 @@ workflows:
               only: master
             tags:
               ignore: /.*/
-      - circle-agent/publish:
-          context: ci
+      - executor-tools/publish:
+          context: executor-publishing
+          image: feedyard/circleci-base-agent
           registry: quay.io
+          after-publish:
+            - common/slack:
+                title: New Executor Version
+                message: new version published feedyard/circleci-base-agent $CIRCLE_TAG
+                webhook: $SLACK_WEBHOOK
           filters:
             branches:
               ignore: /.*/
             tags:
               only: /.*/
+
+
+
+#---
+#version: 2.1
+#
+#orbs:
+#  circle-agent: feedyard/circleci-agent-publish@dev:latest
+#
+#workflows:
+#  circleci-base-agent-pipeline:
+#    jobs:
+#      - circle-agent/dev-release:
+#          context: ci
+#          registry: quay.io
+#          after_checkout:
+#            - run:
+#                name: Lint Dockerfile
+#                command: hadolint Dockerfile
+#          after_build:
+#            - run:
+#                name: configuration testing of the image
+#                command: |
+#                  set -euo pipefail
+#                  inspec exec --no-distinct-exit profiles/cis-docker
+#                  CID="$(docker run -it -d --entrypoint ash quay.io/feedyard/circleci-base-agent:$CIRCLE_SHA1)"
+#                  inspec exec profiles/circleci-base-agent/ -t docker://$CID
+#                  docker rm -f $CID
+#          filters:
+#            branches:
+#              only: master
+#            tags:
+#              ignore: /.*/
+#      - circle-agent/publish:
+#          context: ci
+#          registry: quay.io
+#          filters:
+#            branches:
+#              ignore: /.*/
+#            tags:
+#              only: /.*/

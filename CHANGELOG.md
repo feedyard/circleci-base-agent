@@ -594,3 +594,6 @@ gcc 2.3.0-r0
 g++ 2.3.0-r0
 python3-dev=3.6.8-r2
 
+### 06-03-2019 security patched package for jq
+
+Installing jq (1.6_rc1-r1)
