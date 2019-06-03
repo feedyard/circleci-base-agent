@@ -125,7 +125,7 @@ control 'rubocop version' do
   title 'confirm rubocop version installed'
   desc 'confirm version reported by rubocop matches the desired version'
   describe command('rubocop -v') do
-    its('stdout') { should include ('0.65') }
+    its('stdout') { should include ('0.71') }
   end
 end
 
