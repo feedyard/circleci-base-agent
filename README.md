@@ -1,34 +1,12 @@
-[![CircleCI](https://circleci.com/gh/feedyard/circleci-base-agent.svg?style=svg)](https://circleci.com/gh/feedyard/circleci-base-agent)
-[![Docker Repository on Quay](https://quay.io/repository/feedyard/circleci-base-agent/status "Docker Repository on Quay")](https://quay.io/repository/feedyard/circleci-base-agent)
-# feedyard/circleci-base-agent
+# feedyard/circleci-base-agent [![CircleCI](https://circleci.com/gh/feedyard/circleci-base-agent.svg?style=svg)](https://circleci.com/gh/feedyard/circleci-base-agent) [![Docker Repository on Quay](https://quay.io/repository/feedyard/circleci-base-agent/status "Docker Repository on Quay")](https://quay.io/repository/feedyard/circleci-base-agent) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/feedyard/orb-executor-tools/master/LICENSE)
 
 circleci primary container, based on feedyard/circleci-remote-docker. includes common tools for building and testing
-docker images used for more complex infrastructure as code pipelines circleci pipelines.
+docker images to be used as primary containers infrastructure as code pipelines circleci pipelines.
 
-Core functionality around:
-python3
-ruby
+_includes_
 
-cli or testing frameworks:
-invoke
-inspec
-pylint
-yamllint
-rubocop
+*packages* bash curl wget gnupg jq docker hadolint
+*languages* python3 ruby
+*gems/pip* invoke inspec pylint yamllint rubocop
 
-See CHANGELOG for list of installed packages/versions
-
-## requirements for ci and local development
-
-Depends on feedyard circleci orb common-pipeline-tasks. FEEDYARD_CIRCLECI_ENC used as encrypt/decrypt key for local
-files. Set matching var in circleci repository and include local file `local.env` with the following access information.
-
-```$xslt
-FEEDYARD_CIRCLECI_QUAYIO_DEPLOY_USER=
-FEEDYARD_CIRCLECI_QUAYIO_DEPLOY_USER_TOKEN=
-```
-
-run (or review) `prereqs.sh` to install requirements for local development.
-
-
-add bash openssl or
+See CHANGELOG for list of installed packages/versions. Based on Alpine linux.
