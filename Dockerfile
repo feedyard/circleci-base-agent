@@ -57,6 +57,6 @@ RUN pip install \
            /tmp/* && \
     apk del build-dependencies
 
-RUN mkdir -p /etc/chef/accepted_licenses && touch /etc/chef/accepted_licenses/inspec
+COPY inspec /etc/chef/accepted_licenses/inspec
 
 HEALTHCHECK NONE
