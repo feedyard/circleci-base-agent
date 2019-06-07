@@ -597,3 +597,8 @@ python3-dev=3.6.8-r2
 ### 06-03-2019 security patched package for jq
 
 Installing jq (1.6_rc1-r1)
+
+### 06-07-2019 base image and package updates
+
+feedyard/circleci-remote-docker:5.1.0
+inspec-bin 4.3.2
