@@ -20,9 +20,9 @@ workflows:
                 name: configuration testing
                 command: |
                   set -euo pipefail
-                  inspec exec --no-distinct-exit profiles/cis-docker
+                  inspec exec --no-distinct-exit --chef-license accept-silent profiles/cis-docker
                   CID="$(docker run -it -d --entrypoint ash quay.io/feedyard/circleci-base-agent:dev.$CIRCLE_SHA1)"
-                  inspec exec profiles/circleci-base-agent/ -t docker://$CID
+                  inspec exec profiles/circleci-base-agent/ -t docker://$CID --chef-license accept-silent
                   docker rm -f $CID
           filters:
             branches:
@@ -70,7 +70,7 @@ workflows:
                 name: configuration testing
                 command: |
                   set -euo pipefail
-                  inspec exec --no-distinct-exit profiles/cis-docker
+                  inspec exec --no-distinct-exit --chef-license accept-silent profiles/cis-docker
                   CID="$(docker run -it -d --entrypoint ash quay.io/feedyard/circleci-base-agent:nightly)"
-                  inspec exec profiles/circleci-base-agent-unpinned/ -t docker://$CID
+                  inspec exec profiles/circleci-base-agent-unpinned/ -t docker://$CID --chef-license accept-silent
                   docker rm -f $CID
