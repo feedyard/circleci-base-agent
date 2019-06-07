@@ -1,4 +1,4 @@
-FROM quay.io/feedyard/circleci-remote-docker:5.0.3
+FROM quay.io/feedyard/circleci-remote-docker:5.1.0
 
 LABEL maintainers = "nic.cheneweth@thoughtworks.com"
 
@@ -16,7 +16,7 @@ RUN echo 'http://dl-cdn.alpinelinux.org/alpine/v3.8/main' >> /etc/apk/repositori
         bash=4.4.19-r1 \
         docker=18.09.1-r0 \
         openrc=0.39.2-r3 \
-        curl=7.64.0-r1 \
+        curl=7.64.0-r2 \
         wget=1.20.3-r0 \
         python3=3.6.8-r2 \
         ruby=2.5.5-r0 \

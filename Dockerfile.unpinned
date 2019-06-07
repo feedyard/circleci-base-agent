@@ -1,4 +1,4 @@
-FROM quay.io/feedyard/circleci-remote-docker:5.0.3
+FROM quay.io/feedyard/circleci-remote-docker:5.1.0
 
 LABEL maintainers = "nic.cheneweth@thoughtworks.com"
 
@@ -17,6 +17,7 @@ RUN apk add --no-cache \
         ruby-bundler \
         ruby-bigdecimal \
         ruby-webrick \
+        gnugp \
         jq && \
     apk add --virtual build-dependencies \
         build-base \

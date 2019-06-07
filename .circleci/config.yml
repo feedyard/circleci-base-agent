@@ -2,8 +2,8 @@
 version: 2.1
 
 orbs:
-  executor-tools: feedyard/executor-tools@0.1.0
-  common: feedyard/common-pipeline-tasks@0.3.0
+  executor-tools: feedyard/executor-tools@dev:latest
+  common: feedyard/common-pipeline-tasks@dev:latest
 
 workflows:
   version: 2
@@ -11,6 +11,7 @@ workflows:
   circleci-base-agent-executor-pipeline:
     jobs:
       - executor-tools/dev-release:
+          name: dev-release
           context: executor-publishing
           image: feedyard/circleci-base-agent
           registry: quay.io
@@ -25,7 +26,7 @@ workflows:
                   docker rm -f $CID
           filters:
             branches:
-              only: master
+              only: /master/
             tags:
               ignore: /.*/
       - executor-tools/publish:
@@ -36,9 +37,36 @@ workflows:
             - common/slack:
                 title: New Executor Version
                 message: new version published feedyard/circleci-base-agent $CIRCLE_TAG
-                webhook: $SLACK_WEBHOOK
+                webhook: SLACK_WEBHOOK
           filters:
             branches:
               ignore: /.*/
             tags:
               only: /.*/
+
+  # builds nightly from .unpinned Dockerfile in order to always be a latest for base image and packages
+  circleci-base-agent-executor-nightly-build:
+    triggers:
+      - schedule:
+          cron: "0 6 * * *"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - executor-tools/dev-release:
+          name: nightly-build
+          context: executor-publishing
+          image: feedyard/circleci-base-agent
+          dockerfile: Dockerfile.unpinned
+          tag: nightly
+          registry: quay.io
+          after-build:
+            - run:
+                name: configuration testing
+                command: |
+                  set -euo pipefail
+                  inspec exec --no-distinct-exit profiles/cis-docker
+                  CID="$(docker run -it -d --entrypoint ash quay.io/feedyard/circleci-base-agent:nightly)"
+                  inspec exec profiles/circleci-base-agent-unpinned/ -t docker://$CID
+                  docker rm -f $CID
