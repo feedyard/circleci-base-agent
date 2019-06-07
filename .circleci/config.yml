@@ -21,7 +21,7 @@ workflows:
                 command: |
                   set -euo pipefail
                   inspec exec --no-distinct-exit profiles/cis-docker
-                  CID="$(docker run -it -d --entrypoint ash quay.io/feedyard/circleci-base-agent:$CIRCLE_SHA1)"
+                  CID="$(docker run -it -d --entrypoint ash quay.io/feedyard/circleci-base-agent:dev.$CIRCLE_SHA1)"
                   inspec exec profiles/circleci-base-agent/ -t docker://$CID
                   docker rm -f $CID
           filters:
@@ -38,6 +38,10 @@ workflows:
                 title: New Executor Version
                 message: new version published feedyard/circleci-base-agent $CIRCLE_TAG
                 webhook: SLACK_WEBHOOK
+          clean-tags:
+            - executor-tools/clean-quay:
+                image: feedyard/circleci-base-agent
+                bearer-token: QUAYIO_BEARER_TOKEN
           filters:
             branches:
               ignore: /.*/
