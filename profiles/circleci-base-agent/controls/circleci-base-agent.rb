@@ -15,6 +15,8 @@ control 'packages' do
     its('stdout') { should include ('ruby-webrick') }
     its('stdout') { should include ('ruby-bigdecimal') }
     its('stdout') { should include ('jq') }
+    its('stdout') { should include ('gnupg') }
+    its('stdout') { should include ('openssl') }
     its('stdout') { should_not include ('ruby-dev') }
     its('stdout') { should_not include ('g++') }
     its('stdout') { should_not include ('libffi-dev') }
@@ -138,7 +140,7 @@ control 'yamllint version' do
   title 'confirm yamllint version installed'
   desc 'confirm version reported by yamllint matches the desired version'
   describe command('yamllint -v') do
-    its('stdout') { should include ('1.15') }
+    its('stdout') { should include ('1.16') }
   end
 end
 
@@ -156,7 +158,7 @@ control 'inspec version' do
   title 'confirm inspec version installed'
   desc 'confirm version reported by inspec matches the desired version'
   describe command('inspec version') do
-    its('stdout') { should include ('4.3') }
+    its('stdout') { should include ('4.6') }
   end
 end
 
@@ -166,5 +168,14 @@ control 'gnugp version' do
   desc 'confirm version reported by gnugp matches the desired version'
   describe command('gpg --version') do
     its('stdout') { should include ('2.2') }
+  end
+end
+
+control 'openssl version' do
+  impact 1.0
+  title 'confirm openssl version installed'
+  desc 'confirm version reported by gnugp matches the desired version'
+  describe command('openssl version') do
+    its('stdout') { should include ('1.1') }
   end
 end

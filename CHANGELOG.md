@@ -602,3 +602,9 @@ Installing jq (1.6_rc1-r1)
 
 feedyard/circleci-remote-docker:5.1.0
 inspec-bin 4.3.2
+
+### 06-19-2019 add and update packages
+
+Installing openssl (1.1.1b-r1)
+yamllint==1.16.0
+installed inspec-4.6.4

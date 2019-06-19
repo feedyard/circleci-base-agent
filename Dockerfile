@@ -3,10 +3,10 @@ FROM quay.io/feedyard/circleci-remote-docker:5.1.0
 LABEL maintainers = "nic.cheneweth@thoughtworks.com"
 
 # package versions installed
-ENV INSPEC_VERSION=4.3.2
+ENV INSPEC_VERSION=4.6.4
 ENV INVOKE_VERSION=1.2.0
 ENV PYLINT_VERSION=2.3.1
-ENV YAMLLINT_VERSION=1.15.0
+ENV YAMLLINT_VERSION=1.16.0
 ENV RUBOCOP_VERSION=0.71.0
 ENV HADOLINT_VERSION=1.16.3
 
@@ -24,6 +24,7 @@ RUN echo 'http://dl-cdn.alpinelinux.org/alpine/v3.8/main' >> /etc/apk/repositori
         ruby-bigdecimal=2.5.5-r0 \
         ruby-webrick=2.5.5-r0 \
         gnupg=2.2.12-r0 \
+        openssl=1.1.1b-r1 \
         jq=1.6_rc1-r1 && \
     apk add --virtual build-dependencies \
         build-base=0.5-r1 \

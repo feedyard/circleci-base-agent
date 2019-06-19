@@ -15,6 +15,7 @@ control 'packages' do
     its('stdout') { should include ('ruby-webrick') }
     its('stdout') { should include ('ruby-bigdecimal') }
     its('stdout') { should include ('gnupg') }
+    its('stdout') { should include ('openssl') }
     its('stdout') { should include ('jq') }
     its('stdout') { should_not include ('ruby-dev') }
     its('stdout') { should_not include ('g++') }
