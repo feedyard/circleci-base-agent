@@ -14,6 +14,7 @@ ruby     |          |
 curl     |          |
 wget     |          |
 gnupg    |          |
+openssl  |          |
 jq       |          |
 hadolint |          |
 

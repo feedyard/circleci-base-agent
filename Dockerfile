@@ -1,4 +1,4 @@
-FROM quay.io/feedyard/circleci-remote-docker:5.1.0
+FROM quay.io/feedyard/circleci-remote-docker:5.2.0
 
 LABEL maintainers = "nic.cheneweth@thoughtworks.com"
 
