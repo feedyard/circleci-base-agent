@@ -39,7 +39,7 @@ control 'bash version' do
   title 'confirm bash version installed'
   desc 'confirm version reported by bash matches the desired version'
   describe command('bash --version') do
-    its('stdout') { should include ('4.4') }
+    its('stdout') { should include ('5.0') }
   end
 end
 
@@ -66,7 +66,7 @@ control 'python3 version' do
   title 'confirm python3 version installed'
   desc 'confirm version reported by python3 matches the desired version'
   describe command('python3 -V') do
-    its('stdout') { should include ('3.6') }
+    its('stdout') { should include ('3.7') }
   end
 end
 
@@ -84,7 +84,7 @@ control 'bundler version' do
   title 'confirm bundler version installed'
   desc 'confirm version reported by bundler matches the desired version'
   describe command('bundler -v') do
-    its('stdout') { should include ('1.17') }
+    its('stdout') { should include ('2.0') }
   end
 end
 
@@ -149,7 +149,7 @@ control 'rubocop version' do
   title 'confirm rubocop version installed'
   desc 'confirm version reported by rubocop matches the desired version'
   describe command('rubocop -v') do
-    its('stdout') { should include ('0.71') }
+    its('stdout') { should include ('0.73') }
   end
 end
 
@@ -158,7 +158,7 @@ control 'inspec version' do
   title 'confirm inspec version installed'
   desc 'confirm version reported by inspec matches the desired version'
   describe command('inspec version') do
-    its('stdout') { should include ('4.6') }
+    its('stdout') { should include ('4.7') }
   end
 end
 
