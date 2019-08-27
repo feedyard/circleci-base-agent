@@ -30,7 +30,7 @@ control 'docker version' do
   title 'confirm docker version installed'
   desc 'confirm version reported by docker matches the desired version'
   describe command('docker version') do
-    its('stdout') { should include ('18.09') }
+    its('stdout') { should include ('19.03') }
   end
 end
 
@@ -122,7 +122,7 @@ control 'invoke version' do
   title 'confirm invoke version installed'
   desc 'confirm version reported by invoke matches the desired version'
   describe command('invoke -V') do
-    its('stdout') { should include ('1.2') }
+    its('stdout') { should include ('1.3') }
   end
 end
 
@@ -149,7 +149,7 @@ control 'rubocop version' do
   title 'confirm rubocop version installed'
   desc 'confirm version reported by rubocop matches the desired version'
   describe command('rubocop -v') do
-    its('stdout') { should include ('0.73') }
+    its('stdout') { should include ('0.74') }
   end
 end
 
@@ -158,7 +158,7 @@ control 'inspec version' do
   title 'confirm inspec version installed'
   desc 'confirm version reported by inspec matches the desired version'
   describe command('inspec version') do
-    its('stdout') { should include ('4.7') }
+    its('stdout') { should include ('4.12') }
   end
 end
 
