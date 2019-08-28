@@ -1,4 +1,4 @@
-### 08-28-2019 release version 4.10.0
+### 08-28-2019 release version 4.11.0
 
 FROM quay.io/feedyard/circleci-remote-docker:5.3.1
 
