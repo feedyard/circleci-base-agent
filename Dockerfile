@@ -12,21 +12,23 @@ ENV HADOLINT_VERSION=1.17.1
 
 # general packages to support building infra oriented docker images
 RUN echo 'http://dl-cdn.alpinelinux.org/alpine/v3.8/main' >> /etc/apk/repositories && \
-    apk add --no-cache \
+    echo 'http://dl-cdn.alpinelinux.org/alpine/edge/main' >> /etc/apk/repositories && \
+    echo 'http://dl-cdn.alpinelinux.org/alpine/edge/community' >> /etc/apk/repositories && \
+    apk --no-cache add \
         bash=5.0.0-r0 \
         docker=19.03.1-r2 \
-        openrc=0.42.1-r0 \
-        curl=7.65.3-r0 \
+        openrc=0.41.2-r1 \
+        curl=7.65.1-r0 \
         wget=1.20.3-r0 \
         python3=3.7.4-r0 \
         ruby=2.5.5-r0 \
         ruby-bundler=2.0.2-r0 \
         ruby-bigdecimal=2.5.5-r0 \
         ruby-webrick=2.5.5-r0 \
-        gnupg=2.2.17-r0 \
+        gnupg=2.2.16-r0 \
         openssl=1.1.1c-r0 \
         jq=1.6_rc1-r1 && \
-    apk add --virtual build-dependencies \
+    apk --no-cache add --virtual build-dependencies \
         build-base=0.5-r1 \
         python3-dev=3.7.4-r0 \
         ruby-dev=2.5.5-r0 \
