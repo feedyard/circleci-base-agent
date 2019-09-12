@@ -16,7 +16,7 @@ RUN echo 'http://dl-cdn.alpinelinux.org/alpine/v3.8/main' >> /etc/apk/repositori
     echo 'http://dl-cdn.alpinelinux.org/alpine/edge/community' >> /etc/apk/repositories && \
     apk --no-cache add \
         bash=5.0.0-r0 \
-        docker=19.03.2-r2 \
+        docker=19.03.2-r0 \
         openrc=0.41.2-r1 \
         curl=7.65.1-r0 \
         wget=1.20.3-r0 \
