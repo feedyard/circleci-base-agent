@@ -3,7 +3,7 @@ FROM quay.io/feedyard/circleci-remote-docker:nightly
 LABEL maintainers = "nic.cheneweth@thoughtworks.com"
 
 # most package versions unspecified - pull latest wherever possible
-ENV HADOLINT_VERSION=1.17.1
+ENV HADOLINT_VERSION=1.17.2
 
 # general packages to support building infra oriented docker images
 RUN echo 'http://dl-cdn.alpinelinux.org/alpine/v3.8/main' >> /etc/apk/repositories && \

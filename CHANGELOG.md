@@ -1,3 +1,9 @@
+### 09-12-2019 release version 4.12.0
+
+hadolint 1.17.2
+inspec 4.16.0
+docker 19.03.2-r0
+
 ### 08-28-2019 release version 4.11.0
 
 FROM quay.io/feedyard/circleci-remote-docker:5.3.1
