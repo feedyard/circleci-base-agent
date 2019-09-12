@@ -3,12 +3,12 @@ FROM quay.io/feedyard/circleci-remote-docker:5.3.1
 LABEL maintainers = "nic.cheneweth@thoughtworks.com"
 
 # package versions installed
-ENV INSPEC_VERSION=4.12.0
+ENV INSPEC_VERSION=4.16.0
 ENV INVOKE_VERSION=1.3.0
 ENV PYLINT_VERSION=2.3.1
 ENV YAMLLINT_VERSION=1.17.0
 ENV RUBOCOP_VERSION=0.74.0
-ENV HADOLINT_VERSION=1.17.1
+ENV HADOLINT_VERSION=1.17.2
 
 # general packages to support building infra oriented docker images
 RUN echo 'http://dl-cdn.alpinelinux.org/alpine/v3.8/main' >> /etc/apk/repositories && \
